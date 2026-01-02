@@ -1,3 +1,16 @@
+/*
+    Create a class called Student with the following requirements:
+1. The class has two private attributes: name (string), grade (int)
+2. Provide set and get methods for both attributes. The setGrade(int g) method should
+reject grades less than 0 or greater than 100.
+3. Add a method isEqual(Student other) that returns true if both students have the same
+name and grade.
+4. In the main) function: Create two Student objects, Use the setter methods to assign
+values, Print both students' info using the getters. Use isEqual() to check if they are the
+same student and print the result as Yes or No.
+    */
+
+
 #include<iostream>
 using namespace std;
 
