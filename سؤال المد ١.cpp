@@ -1,66 +1,61 @@
 #include<iostream>
 using namespace std;
 
-class Emploee{
+class Employee{
     
 private:
     string employeeName;
-    double employeSalary;
+    double employeeSalary;
+    
 public:
     
-    Emploee(string employeeName, double employeSalary){
+    Employee(string employeeName,double employeeSalary){
         
         this->employeeName = employeeName;
-        this->employeSalary = employeSalary;
+        this->employeeSalary = employeeSalary;
     }
     
     void setEmployeeName(string employeeName){
         this->employeeName = employeeName;
     }
     
-    void setEmployeeSalary(double employeSalary){
-        
-        this->employeSalary = employeSalary;
+    void setEmployeeSalary(double employeeSalary){
+        this->employeeSalary = employeeSalary;
     }
     
     string getEmployeeName(){
+        
         return employeeName;
     }
     
     double getEmployeeSalary(){
-        return employeSalary;
+        return employeeSalary;
     }
     
-    double AnnoulSalary(double employeSalary){
+    double getAnnula(){
         
-        return employeSalary * 12;
+        return employeeSalary * 12;
     }
     
-    void riseSalary(double percentage){
+    void giveRise(double percentage){
         
-       double rise =  employeSalary * (percentage / 100.0);
-        
-        employeSalary += rise;
+        double rise =  employeeSalary * (percentage / 100);
+        employeeSalary += rise;
     }
 };
-
-
+    
 int main(){
-  
     
-    Emploee m1("Ali",500);
-    Emploee m2("Sara",800);
     
-    m1.riseSalary(100);
+    Employee m1("Obida",5000);
+    
+    m1.giveRise(5);
     
     cout<<"Name : "<<m1.getEmployeeName()<<endl;
-    cout<<"Monthly Salary : "<<m1.getEmployeeSalary()<<endl;
-    cout<<"Yearly Salary : "<<m1.AnnoulSalary(m1.getEmployeeSalary())<<endl;
-    cout<<"\n\n";
+    cout<<"Salary : "<<m1.getEmployeeSalary()<<endl;
+    cout<<"Annual : "<<m1.getAnnula()<<endl;
     
-    cout<<"Name : "<<m2.getEmployeeName()<<endl;
-    cout<<"Monthly Salary : "<<m2.getEmployeeSalary()<<endl;
-    cout<<"Yearly Salary : "<<m2.AnnoulSalary(m2.getEmployeeSalary())<<endl;
+    
     
     return 0;
 }
